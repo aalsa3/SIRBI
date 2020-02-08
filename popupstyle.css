@@ -1,0 +1,82 @@
+.my-container {
+    width: 700px;
+}
+
+#choice-buttons {
+    height: 70px;
+    width: 80px;
+    margin: 5px;
+    font-size: 2vw;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 1px;
+    padding-left: 1px;
+
+}
+
+body {
+    margin: 20px;
+    height: 500px;
+}
+
+.form-group input[type="text"] {
+    font-size: 16px;
+}
+
+.heading-row {
+}
+
+.price-row {
+
+}
+
+.button-row {
+    
+}
+
+.myForm {
+    margin: 0;
+}
+
+.dropdown-menu {
+    left: 50%;
+    right: auto;
+    text-align: center;
+    transform: translate(-50%, 0) !important;
+    position: absolute;
+}
+
+.currency-col {
+    padding-left: 5%;
+}
+
+.price-col {
+    padding-right: 0;
+}
+
+.price-label {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center !important;
+}
+
+.item-row {
+    margin-top: 5%;
+
+}
+
+.items-col {
+}
+
+.add-item-col {
+}
+
+.add-item-card {
+    width: 90%;
+    margin-bottom: 5%
+}
+
+.item-convert-card {
+    width: 90%;
+    margin-bottom: 1%
+}

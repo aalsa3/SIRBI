@@ -1,0 +1,20 @@
+        <div class = "container-fluid my-container">
+                
+                <div class = "row heading-row">
+                    <h2 class="form-signin-heading">Should I Really Buy It?</h2>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-6">6 cols</div>
+                    <div class="col-lg-6">6 cols</div>
+                  </div>
+
+                <div class = "row hiddenText-row">
+                    <text id = "hiddenText">uhhhh</text>
+                </div>
+                
+                <div class = "row justify-content-center button-row">
+                    <div id = "buttonDiv"></div>
+                </div>
+
+        </div>
