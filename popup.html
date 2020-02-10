@@ -29,7 +29,7 @@
                 <div class="row justify-content-center price-row">
                     <!-- Price Div -->
                     <div class="col-4 price-col align-self-end">
-                        <input type="text" class="form-control" id="itemPrice" placeholder="Cost">
+                        <input type="text" class="form-control" id="item-price" placeholder="Cost">
                     </div>
 
                     <!-- Currency Dropdown Div -->
@@ -58,17 +58,20 @@
 
             <!-- Items List Column -->
             <div class="col-9 items-col">
-                <div class="row justify-content-center">
+
+                <!-- Result Row -->
+                <div id="result-row" class="row justify-content-center d-none result-row">
                     <div class="card add-item-card text-center">
                         <div class="card-header">
                             Result
                         </div>
-                        <div class="card-body result-body">
-                            Lorem ipsum ullumbillala poopuscker
+                        <div id="result-body" class="card-body result-body">
+                            <span>Lorem ipsum ullumbillala poopuscker</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- Item Row  -->
                 <div class="row justify-content-center">
                     <div class="card item-convert-card text-center">
                         <div class="card-header">
@@ -76,14 +79,16 @@
                         </div>
                         <div class="card-body">
                             <div class="row justify-content-center button-row">
-                                <div id="buttonDiv"></div>
+                                <div id="buttonDiv">
+                                    <!-- Use JS to populate item list -->
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Add Item / Result columns -->
+            <!-- Add Item column -->
             <div class="col-3 add-item-col">
                 <!-- Add Item -->
                 <div class="row ">
@@ -92,21 +97,42 @@
                             Add item
                         </div>
                         <div class="card-body">
-                            <button type="button" class="btn btn-dark">Add</button>
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">Add</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            ...
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-
 
     <script src="/bootstrap/js/jquery-3.4.1.min.js"></script>
     <script src="/bootstrap/js/popper-2.0.1.js"></script>
     <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/bootstrap/js/money.js"></script>
     <script src="popup.js"></script>
 
 </body>
-
 </html>
