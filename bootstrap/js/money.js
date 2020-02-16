@@ -23,13 +23,33 @@
 
 	/* --- Setup --- */
 
+	// Load exchange rates data via AJAX:
+	$.getJSON(
+		// NB: using Open Exchange Rates here, but you can use any source!
+		'https://openexchangerates.org/api/latest.json?app_id=45d2c26673544bc9adcdcb16cd5161ec',
+		function(data) {
+			// Check money.js has finished loading:
+			if ( typeof fx !== "undefined" && fx.rates ) {
+				fx.rates = data.rates;
+				fx.base = data.base;
+			} else {
+				// If not, apply to fxSetup global:
+				var fxSetup = {
+					rates : data.rates,
+					base : data.base
+				}
+			}
+		}
+	);
+
 	// fxSetup can be defined before loading money.js, to set the exchange rates and the base
 	// (and default from/to) currencies - or the rates can be loaded in later if needed.
 	var fxSetup = root.fxSetup || {
         rates : {
             "EUR" : 0.61,
             "GBP" : 0.52,
-            "USD" : 0.67,
+			"USD" : 0.67,
+			"BTC" : 0.000067,
             "AUD" : 1,
             
     },
